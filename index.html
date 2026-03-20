@@ -56,10 +56,16 @@
 </head>
 <body class="min-h-screen bg-slate-900 text-slate-50 font-sans selection:bg-emerald-500 selection:text-white">
 
+  <!-- 1. NUEVO: Fondo dinámico de circuitos (Canvas) -->
+  <canvas id="circuit-canvas" class="fixed inset-0 w-full h-full pointer-events-none opacity-30" style="z-index: 0;"></canvas>
+
+  <!-- 2. NUEVO: Contenedor principal para asegurar que el contenido esté sobre el fondo -->
+  <div class="relative z-10">
+
   <!-- Enlace de WhatsApp Centralizado -->
   <!-- NOTA: Cambia el número '1234567890' por tu número real con código de país (Ej: 593987654321) -->
   <script>
-    const whatsappLink = "https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local.";
+    const whatsappLink = "https://wa.me/1234567890?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local.";
   </script>
 
   <!-- Navbar -->
@@ -70,7 +76,7 @@
         <span class="text-xl font-bold tracking-tight">iaparatodos<span class="text-emerald-500">.io</span></span>
       </div>
       <a 
-        href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+        href="https://wa.me/1234567890?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
         target="_blank"
         rel="noopener noreferrer"
         class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors hidden sm:block"
@@ -105,7 +111,7 @@
       </p>
       
       <a 
-        href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+        href="https://wa.me/1234567890?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
         target="_blank"
         rel="noopener noreferrer"
         class="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
@@ -405,12 +411,12 @@
 
           <div>
             <a 
-              href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+              href="https://wa.me/1234567890?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
               target="_blank"
               rel="noopener noreferrer"
               class="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
             >
-              Agenda una evaluación gratuita
+              Agenda una evaluación gratuita de tu local
               <i data-lucide="arrow-right" class="h-5 w-5"></i>
             </a>
             <p class="text-sm text-slate-500 mt-4">Sin compromisos. Habla directo con nosotros.</p>
@@ -425,6 +431,9 @@
   <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
     <p>© <script>document.write(new Date().getFullYear())</script> iaparatodos.io. Todos los derechos reservados.</p>
   </footer>
+
+  <!-- 3. NUEVO: Cierre del contenedor principal -->
+  </div>
 
   <!-- Inicialización de los íconos y Scripts de Rotación -->
   <script>
@@ -473,6 +482,73 @@
         bubbleEl.style.transform = 'scale(1)';
       }, 500); 
     }, 4500);
+
+    // 4. NUEVO: Script para el fondo dinámico de circuitos/redes
+    const canvas = document.getElementById('circuit-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, particles;
+
+    function initCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      particles = [];
+      // Cantidad de nodos basados en la pantalla (máximo 120 para evitar lag en móviles)
+      const particleCount = Math.min(Math.floor((width * height) / 12000), 120); 
+      
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.6, // Velocidad X
+          vy: (Math.random() - 0.5) * 0.6, // Velocidad Y
+          radius: Math.random() * 1.5 + 0.5
+        });
+      }
+    }
+
+    function animateCanvas() {
+      requestAnimationFrame(animateCanvas);
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = 'rgba(16, 185, 129, 0.6)'; // Color de los puntos (Esmeralda)
+
+      particles.forEach((p, index) => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        // Rebotar en los bordes
+        if (p.x < 0 || p.x > width) p.vx *= -1;
+        if (p.y < 0 || p.y > height) p.vy *= -1;
+
+        // Dibujar el punto
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fill();
+
+        // Conectar puntos cercanos con una línea
+        for (let j = index + 1; j < particles.length; j++) {
+          const p2 = particles[j];
+          const dx = p.x - p2.x;
+          const dy = p.y - p2.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+
+          // Si están a menos de 130px de distancia, los conecta
+          if (dist < 130) {
+            ctx.beginPath();
+            // La opacidad baja mientras más se alejan
+            ctx.strokeStyle = `rgba(16, 185, 129, ${0.25 - dist/130 * 0.25})`; 
+            ctx.lineWidth = 1;
+            ctx.moveTo(p.x, p.y);
+            ctx.lineTo(p2.x, p2.y);
+            ctx.stroke();
+          }
+        }
+      });
+    }
+
+    // Inicializar y arrancar animación
+    window.addEventListener('resize', initCanvas);
+    initCanvas();
+    animateCanvas();
   </script>
 </body>
 </html>
