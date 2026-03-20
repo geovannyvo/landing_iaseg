@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iaparatodos.io - Seguridad Inteligente</title>
+    
+    <!-- Etiquetas SEO y de visualización para WhatsApp/Redes Sociales -->
+    <meta name="description" content="El Guardia de Seguridad que nunca duerme. Sistema de videovigilancia con Inteligencia Artificial que te avisa en tiempo real a tu WhatsApp.">
+    <meta property="og:title" content="iaparatodos.io - Seguridad Inteligente">
+    <meta property="og:description" content="Elimina las falsas alarmas. Recibe alertas en video directo en tu WhatsApp cuando se detecta un intruso.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://iaparatodos.io">
+    <!-- Opcional: Si tienes una imagen de portada, pon el link aquí abajo para que salga en WhatsApp -->
+    <!-- <meta property="og:image" content="URL_DE_TU_IMAGEN.jpg"> -->
+
+    <!-- Tailwind CSS para los estilos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icons para los íconos -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <!-- Configuración personalizada de Tailwind -->
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Estilos para la animación del carrusel -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+
+      @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+      .animate-infinite-scroll {
+        animation: scroll 40s linear infinite;
+        width: max-content;
+      }
+      .animate-infinite-scroll:hover {
+        animation-play-state: paused;
+      }
+    </style>
+</head>
+<body class="min-h-screen bg-slate-900 text-slate-50 font-sans selection:bg-emerald-500 selection:text-white">
+
+  <!-- Enlace de WhatsApp Centralizado -->
+  <!-- NOTA: Cambia el número '1234567890' por tu número real con código de país (Ej: 593987654321) -->
+  <script>
+    const whatsappLink = "https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local.";
+  </script>
+
+  <!-- Navbar -->
+  <nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shield-check" class="h-8 w-8 text-emerald-500"></i>
+        <span class="text-xl font-bold tracking-tight">iaparatodos<span class="text-emerald-500">.io</span></span>
+      </div>
+      <a 
+        href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors hidden sm:block"
+      >
+        Contacto directo
+      </a>
+    </div>
+  </nav>
+
+  <!-- 1. Inicio (Hero Section) -->
+  <section class="relative pt-20 pb-24 lg:pt-32 lg:pb-40 overflow-hidden">
+    <!-- Decorative background elements -->
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[500px] opacity-20 pointer-events-none">
+      <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/30 to-blue-500/30 blur-3xl rounded-full mix-blend-screen"></div>
+    </div>
+
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-sm font-medium mb-8 border border-emerald-500/20">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        Monitoreo Activo 24/7
+      </div>
+      
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-8 leading-tight">
+        El Guardia de Seguridad que <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-cyan-400">nunca duerme</span> y te reporta directo a tu WhatsApp.
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+        Sistema de videovigilancia con Inteligencia Artificial que elimina las falsas alarmas y te avisa en tiempo real si hay intrusos fuera de horario.
+      </p>
+      
+      <a 
+        href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full text-lg font-bold transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+      >
+        <i data-lucide="message-circle" class="h-6 w-6"></i>
+        Quiero una Demo en mi WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- 2. Demo (La prueba irrefutable) -->
+  <section class="py-20 bg-slate-950 relative border-y border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col lg:flex-row items-center gap-12">
+        
+        <div class="lg:w-1/2 text-center lg:text-left">
+          <h2 class="text-3xl md:text-4xl font-bold mb-6">Míralo en acción</h2>
+          <p class="text-xl text-slate-400 mb-8 border-l-4 border-emerald-500 pl-4 italic">
+            "Análisis inteligente segundo a segundo con alertas instantáneas."
+          </p>
+          <ul class="space-y-4 text-slate-300 text-left max-w-md mx-auto lg:mx-0">
+            <li class="flex items-center gap-3">
+              <div class="bg-slate-800 p-2 rounded-full"><i data-lucide="video" class="h-5 w-5 text-emerald-400"></i></div>
+              <span>Captura eventos reales en tiempo récord</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <div class="bg-slate-800 p-2 rounded-full"><i data-lucide="smartphone" class="h-5 w-5 text-emerald-400"></i></div>
+              <span>Notificación directa y precisa a tu bolsillo</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Simulación de Video/Teléfono Dinámica -->
+        <div class="lg:w-1/2 w-full max-w-sm mx-auto">
+          <div class="relative mx-auto border-gray-800 bg-gray-800 border-[10px] rounded-[2.5rem] h-[500px] w-full max-w-[280px] shadow-2xl overflow-hidden ring-1 ring-white/10">
+            <!-- Notch -->
+            <div class="absolute top-0 inset-x-0 h-6 bg-gray-800 rounded-b-3xl w-32 mx-auto z-20"></div>
+            
+            <!-- Pantalla simulando WhatsApp -->
+            <div class="bg-[#0b141a] w-full h-full flex flex-col relative z-10">
+              <!-- Header WA -->
+              <div class="bg-[#202c33] h-16 flex items-center px-4 gap-3 pt-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-600 flex items-center justify-center">
+                  <i data-lucide="shield-check" class="h-5 w-5 text-white"></i>
+                </div>
+                <div>
+                  <h3 class="text-white text-sm font-semibold">iaparatodos.io Alertas</h3>
+                  <p class="text-[#8696a0] text-xs">en línea</p>
+                </div>
+              </div>
+              
+              <!-- Fondo Chat WA -->
+              <div class="flex-1 p-4 flex flex-col justify-center space-y-4 opacity-90" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png')">
+                <div id="alert-date" class="bg-[#202c33] text-white p-1 rounded-lg text-xs text-center mx-auto w-fit mb-2 transition-opacity duration-300">Hoy</div>
+                
+                <!-- Burbuja de mensaje IA -->
+                <div id="alert-bubble" class="bg-[#202c33] text-[#e9edef] p-3 rounded-lg rounded-tl-none max-w-[90%] shadow-sm relative transform transition-all duration-500">
+                  <p class="font-bold text-emerald-400 mb-1 flex items-center gap-1">
+                    ⚠️ ALERTA DE INTRUSO
+                  </p>
+                  <p id="alert-text" class="text-sm mb-2 transition-opacity duration-300">Persona detectada en cámara "Cocina" a las 15:14 PM.</p>
+                  
+                  <!-- Imagen dinámica de captura -->
+                  <div class="w-full h-32 bg-slate-800 rounded mb-2 relative overflow-hidden group">
+                    <img id="alert-img" src="images/6.jpg" alt="Intruso" class="w-full h-full object-cover opacity-80 transition-opacity duration-500" />
+                    <div class="absolute inset-0 flex items-center justify-center">
+                       <div class="bg-black/50 p-3 rounded-full">
+                         <i data-lucide="play" class="h-6 w-6 text-white" fill="white"></i>
+                       </div>
+                    </div>
+                  </div>
+                  
+                  <span id="alert-time" class="text-[10px] text-[#8696a0] absolute bottom-2 right-2 transition-opacity duration-300">15:14</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Fases (Cómo funciona) -->
+  <section class="py-24">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">Cómo funciona en 3 pasos simples</h2>
+        <p class="text-slate-400">Instalación rápida, resultados inmediatos.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Fase 1 -->
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 relative hover:border-emerald-500/50 transition-colors">
+          <div class="bg-slate-900 w-12 h-12 flex items-center justify-center rounded-xl absolute -top-6 left-8 border border-slate-700 shadow-lg">
+            <i data-lucide="eye" class="h-6 w-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 mt-4">Fase 1: El Ojo</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Conectamos nuestra Inteligencia Artificial a tus cámaras actuales (restricciones) , o instalamos una nueva si no tienes.
+          </p>
+        </div>
+
+        <!-- Fase 2 -->
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 relative hover:border-emerald-500/50 transition-colors">
+          <div class="bg-slate-900 w-12 h-12 flex items-center justify-center rounded-xl absolute -top-6 left-8 border border-slate-700 shadow-lg">
+            <i data-lucide="brain-circuit" class="h-6 w-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 mt-4">Fase 2: El Cerebro</h3>
+          <p class="text-slate-400 leading-relaxed">
+            La IA monitorea 24/7 y diferencia entre un humano real, un animal o una sombra. <span class="text-emerald-400 font-semibold">Cero falsas alarmas.</span>
+          </p>
+        </div>
+
+        <!-- Fase 3 -->
+        <div class="bg-slate-800/50 p-8 rounded-2xl border border-slate-700 relative hover:border-emerald-500/50 transition-colors">
+          <div class="bg-slate-900 w-12 h-12 flex items-center justify-center rounded-xl absolute -top-6 left-8 border border-slate-700 shadow-lg">
+            <i data-lucide="message-circle" class="h-6 w-6 text-emerald-400"></i>
+          </div>
+          <h3 class="text-xl font-bold mb-3 mt-4">Fase 3: La Alerta</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Recibes un mensaje inmediato en WhatsApp con los detalles e imágenes si alguien rompe el horario permitido.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3.5 Pruebas Sociales (Carrusel infinito) -->
+  <section class="py-20 overflow-hidden bg-slate-900 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">Casos de Éxito Reales</h2>
+      <p class="text-slate-400">Empresas que ya duermen tranquilas con el sistema de iaparatodos</p>
+    </div>
+
+    <div class="relative w-full flex overflow-hidden group">
+      <!-- Sombras en los bordes -->
+      <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-slate-900 to-transparent z-10"></div>
+      <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-slate-900 to-transparent z-10"></div>
+      
+      <div class="animate-infinite-scroll flex gap-6 px-3">
+        
+        <!-- Bloque 1 de Testimonios -->
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Antes no dormía revisando las cámaras por cualquier ruido. Ahora iaparatodos.io me avisa solo si es necesario. Cero gatos, solo personas."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">C</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Carlos R.</p>
+              <p class="text-xs text-emerald-400">Dueño de Ferretería</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"En la primera semana detectó a alguien saltando el muro a las 3 AM. La policía llegó a tiempo gracias a la alerta rápida."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">A</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Ana M.</p>
+              <p class="text-xs text-emerald-400">Gerente de Bodega</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Teníamos un guardia físico que a veces se quedaba dormido. Este sistema no parpadea. Excelente inversión de seguridad."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">I</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Ing. Roberto</p>
+              <p class="text-xs text-emerald-400">Constructora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Me ahorré miles en falsas alarmas con la empresa de seguridad tradicional. Esto sí funciona y es súper rápido."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">D</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Distribuidora Sur</p>
+              <p class="text-xs text-emerald-400">Local Comercial</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Lo mejor es no tener que instalar aplicaciones raras. Me llega el mensaje, veo el video en WhatsApp y listo."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">M</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Miguel T.</p>
+              <p class="text-xs text-emerald-400">Propietario de Restaurante</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bloque 2 DUPLICADO para hacer el scroll infinito impecable -->
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Antes no dormía revisando las cámaras por cualquier ruido. Ahora el sistema me avisa solo si es necesario en tiempo real. Cero gatos, solo personas."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">C</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Carlos R.</p>
+              <p class="text-xs text-emerald-400">Dueño de Ferretería</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"En la primera semana detectó a alguien saltando el muro a las 3 AM. La policía llegó a tiempo gracias a la alerta rápida."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">A</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Ana M.</p>
+              <p class="text-xs text-emerald-400">Gerente de Bodega</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Teníamos un guardia físico que a veces se quedaba dormido. Este sistema no parpadea. Excelente inversión de seguridad."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">I</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Ing. Roberto</p>
+              <p class="text-xs text-emerald-400">Constructora</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Me ahorré miles en falsas alarmas con la empresa de seguridad tradicional. Esto sí funciona y es súper rápido."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">D</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Distribuidora Sur</p>
+              <p class="text-xs text-emerald-400">Local Comercial</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800/60 backdrop-blur-sm border border-slate-700/50 p-6 rounded-2xl w-80 shrink-0 text-left hover:border-emerald-500/50 hover:bg-slate-800 transition-all">
+          <div class="flex text-emerald-400 mb-4 tracking-widest text-sm">★★★★★</div>
+          <p class="text-slate-300 mb-6 text-sm leading-relaxed min-h-[80px]">"Lo mejor es no tener que instalar aplicaciones raras. Me llega el mensaje, veo el video en WhatsApp y listo."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center font-bold text-slate-300">M</div>
+            <div>
+              <p class="font-bold text-slate-100 text-sm">Miguel T.</p>
+              <p class="text-xs text-emerald-400">Propietario de Restaurante</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Visión (El beneficio emocional) -->
+  <section class="py-20 bg-emerald-950/20 border-y border-emerald-900/30">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <i data-lucide="shield-check" class="h-16 w-16 text-emerald-500/50 mx-auto mb-6"></i>
+      <h2 class="text-2xl md:text-3xl font-medium leading-relaxed italic text-slate-200">
+        "Nuestra visión es devolverte la tranquilidad. Ya no tienes que abrir la app de las cámaras cada noche por paranoia. <span class="text-emerald-400 font-bold not-italic">Si algo pasa, el sistema inteligente te lo dirá.</span>"
+      </h2>
+    </div>
+  </section>
+
+  <!-- 5. Oferta (El cierre) -->
+  <section class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent to-slate-950/50"></div>
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+      
+      <div class="bg-gradient-to-b from-slate-800 to-slate-900 p-1 rounded-3xl mb-10 shadow-2xl">
+        <div class="bg-slate-900 p-8 md:p-12 rounded-[22px] border border-slate-700/50">
+          <h2 class="text-3xl font-bold mb-2">Tu escudo de protección</h2>
+          <p class="text-slate-400 mb-8">Comienza a dormir tranquilo desde hoy.</p>
+          
+          <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700 inline-block text-left w-full md:w-auto mb-8">
+            <p class="font-semibold text-lg flex items-center gap-2 mb-2">
+              <span class="text-emerald-400">✓</span> Instalación de hardware
+            </p>
+            <p class="font-semibold text-lg flex items-center gap-2">
+              <span class="text-emerald-400">✓</span> Suscripción mensual de monitoreo IA
+            </p>
+          </div>
+
+          <div>
+            <a 
+              href="https://wa.me/593993734967?text=Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%2C%20quiero%20agendar%20una%20demostraci%C3%B3n%20de%20iaparatodos.io%20para%20mi%20local."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="w-full sm:w-auto flex items-center justify-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-xl text-lg font-bold transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)] hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+            >
+              Agenda una evaluación gratuita
+              <i data-lucide="arrow-right" class="h-5 w-5"></i>
+            </a>
+            <p class="text-sm text-slate-500 mt-4">Sin compromisos. Habla directo con nosotros.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 bg-slate-950 border-t border-slate-900 text-center text-slate-500 text-sm">
+    <p>© <script>document.write(new Date().getFullYear())</script> iaparatodos.io. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Inicialización de los íconos y Scripts de Rotación -->
+  <script>
+    lucide.createIcons();
+
+    // Script para la animación de las alertas reales en el teléfono
+    const alerts = [
+      { img: 'images/6.jpg', text: 'Persona detectada en cámara "Cocina"', time: '15:14', date: 'Hoy' },
+      { img: 'images/17.jpg', text: 'Humano con objeto detectado en "Sala"', time: '02:45', date: 'Hoy' },
+      { img: 'images/8.png', text: 'Múltiples intrusos en "Local Comercial"', time: '21:33', date: 'Ayer' },
+      { img: 'images/2.png', text: 'Intruso saltando reja en "Perímetro"', time: '01:02', date: 'Ayer' },
+      { img: 'images/3.png', text: 'Actividad sospechosa en "Casilleros"', time: '03:15', date: 'Ayer' },
+      { img: 'images/15.png', text: 'Grupo detectado en "Calle acceso"', time: '03:29', date: 'Ayer' }
+    ];
+
+    let currentAlert = 0;
+    const imgEl = document.getElementById('alert-img');
+    const textEl = document.getElementById('alert-text');
+    const timeEl = document.getElementById('alert-time');
+    const dateEl = document.getElementById('alert-date');
+    const bubbleEl = document.getElementById('alert-bubble');
+
+    // Cambiar la imagen y el texto cada 4.5 segundos
+    setInterval(() => {
+      // 1. Efecto Fade Out (desvanecer)
+      imgEl.style.opacity = '0';
+      textEl.style.opacity = '0';
+      timeEl.style.opacity = '0';
+      dateEl.style.opacity = '0';
+      bubbleEl.style.transform = 'scale(0.95)';
+
+      // 2. Esperar medio segundo, cambiar datos y hacer Fade In
+      setTimeout(() => {
+        currentAlert = (currentAlert + 1) % alerts.length;
+        const alert = alerts[currentAlert];
+
+        imgEl.src = alert.img;
+        textEl.textContent = alert.text + ' a las ' + alert.time + (parseInt(alert.time) >= 12 ? ' PM' : ' AM') + '.';
+        timeEl.textContent = alert.time;
+        dateEl.textContent = alert.date;
+
+        imgEl.style.opacity = '0.8';
+        textEl.style.opacity = '1';
+        timeEl.style.opacity = '1';
+        dateEl.style.opacity = '1';
+        bubbleEl.style.transform = 'scale(1)';
+      }, 500); 
+    }, 4500);
+  </script>
+</body>
+</html>
